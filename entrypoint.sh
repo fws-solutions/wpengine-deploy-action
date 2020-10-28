@@ -6,11 +6,6 @@ set -e
 : ${WPENGINE_SSH_KEY_PRIVATE?Required secret not set.}
 : ${WPENGINE_SSH_KEY_PUBLIC?Required secret not set.}
 
-echo "Private key:"
-echo "${WPENGINE_SSH_KEY_PRIVATE}"
-echo "Public key:"
-echo "${WPENGINE_SSH_KEY_PUBLIC}"
-
 SSH_PATH="$HOME/.ssh"
 WPENGINE_HOST="git.wpengine.com"
 KNOWN_HOSTS_PATH="$SSH_PATH/known_hosts"

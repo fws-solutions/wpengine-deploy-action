@@ -5,21 +5,12 @@ An action to deploy your repository to a **[WP Engine](https://wpengine.com)** s
 ## Example GitHub Action workflow
 
 ```
-workflow "Deploy to WP Engine" {
-  on = "push"
-  resolves = ["Git Push to Production"]
-}
-
-action "Git Push to Production" {
-  uses = "jovrtn/github-action-wpengine-git-deploy@master"
-  env = {
-    WPENGINE_ENVIRONMENT_NAME   = "my-cool-site-production"
-  }
-  secrets = [
-    "WPENGINE_SSH_KEY_PRIVATE",
-    "WPENGINE_SSH_KEY_PUBLIC"
-  ]
-}
+- name: WP Engine Deployment
+  uses: fws-solutions/wpengine-deploy-action@master
+  env:
+    WPENGINE_ENVIRONMENT_NAME: my-environment-name
+    WPENGINE_SSH_KEY_PRIVATE: $WPENGINE_SSH_KEY_PRIVATE
+    WPENGINE_SSH_KEY_PUBLIC: $WPENGINE_SSH_KEY_PUBLIC
 ```
 
 ## Environment Variables & Secrets

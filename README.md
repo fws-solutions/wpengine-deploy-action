@@ -28,7 +28,7 @@ An action to deploy your repository to a **[WP Engine](https://wpengine.com)** s
 | Name | Type  | Usage |
 |-|-|-|
 | `WPENGINE_ENVIRONMENT` | Environment Variable  | Defaults to `production`. You shouldn't need to change this, but if you're using WP Engine's legacy staging, you can override the default and set to `staging` if needed. |
-| `LOCAL_BRANCH` | Environment Variable  | Set which branch in your repository you'd like to push to WP Engine. Defaults to `master`. |
+| `ROOT_DIR` | Environment Variable  | Relative path to directory which will be a docroot on the WP Engine (i.e. "admin"). Useful if your WordPress installation is not in the root of the repository. **Please take care that this directory has all necessary `.gitignore` rules in it and not in the parent directory.** |
 
 ### Further reading
 

@@ -6,7 +6,7 @@ An action to deploy your repository to a **[WP Engine](https://wpengine.com)** s
 
 ```
 - name: WP Engine Deployment
-  uses: fws-solutions/wpengine-deploy-action@1.1.0
+  uses: fws-solutions/wpengine-deploy-action@1.3.0
   env:
     WPENGINE_ENVIRONMENT_NAME: my-environment-name
     WPENGINE_SSH_KEY_PRIVATE: $WPENGINE_SSH_KEY_PRIVATE

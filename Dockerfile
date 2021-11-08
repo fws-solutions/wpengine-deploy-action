@@ -1,4 +1,4 @@
-FROM debian:9.7-slim
+FROM alpine/git:latest
 
 LABEL "com.github.actions.name"="GitHub Action for WP Engine Git Deployment"
 LABEL "com.github.actions.description"="An action to deploy your repository to a WP Engine site via git. Optimized for FWS company flow, based on jovrtn/github-action-wpengine-git-deploy."

@@ -5,6 +5,7 @@ set -e
 : ${WPENGINE_ENVIRONMENT_NAME?Required environment name variable not set.}
 : ${WPENGINE_SSH_KEY_PRIVATE?Required secret not set.}
 : ${WPENGINE_SSH_KEY_PUBLIC?Required secret not set.}
+: ${GITHUB_WORKSPACE_DIR?Required secret not set.}
 
 SSH_PATH="$HOME/.ssh"
 WPENGINE_HOST="git.wpengine.com"
@@ -30,6 +31,7 @@ chmod 644 "$WPENGINE_SSH_KEY_PUBLIC_PATH"
 
 git config --global user.email "github@forwardslashny.com"
 git config --global user.name "GitHub"
+cd $GITHUB_WORKSPACE_DIR
 pwd
 git init
 git config core.sshCommand "ssh -i $WPENGINE_SSH_KEY_PRIVATE_PATH -o UserKnownHostsFile=$KNOWN_HOSTS_PATH"

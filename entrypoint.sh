@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-set +e
+set -e
 
 : ${WPENGINE_ENVIRONMENT_NAME?Required environment name variable not set.}
 : ${WPENGINE_SSH_KEY_PRIVATE?Required secret not set.}

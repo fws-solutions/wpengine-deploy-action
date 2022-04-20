@@ -31,6 +31,11 @@ chmod 644 "$WPENGINE_SSH_KEY_PUBLIC_PATH"
 
 git config --global user.email "github@forwardslashny.com"
 git config --global user.name "GitHub"
+echo "GITHUB_WORKSPACE"
+echo "$GITHUB_WORKSPACE"
+echo "GITHUB_WORKSPACE_DIR"
+echo "$GITHUB_WORKSPACE_DIR"
+
 cd $GITHUB_WORKSPACE_DIR
 pwd
 git init

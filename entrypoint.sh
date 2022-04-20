@@ -5,7 +5,6 @@ set +e
 : ${WPENGINE_ENVIRONMENT_NAME?Required environment name variable not set.}
 : ${WPENGINE_SSH_KEY_PRIVATE?Required secret not set.}
 : ${WPENGINE_SSH_KEY_PUBLIC?Required secret not set.}
-: ${GITHUB_WORKSPACE_DIR?Required secret not set.}
 
 SSH_PATH="$HOME/.ssh"
 WPENGINE_HOST="git.wpengine.com"

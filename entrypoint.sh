@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-set -e
+set +e
 
 : ${WPENGINE_ENVIRONMENT_NAME?Required environment name variable not set.}
 : ${WPENGINE_SSH_KEY_PRIVATE?Required secret not set.}
@@ -31,16 +31,6 @@ chmod 644 "$WPENGINE_SSH_KEY_PUBLIC_PATH"
 
 git config --global user.email "github@forwardslashny.com"
 git config --global user.name "GitHub"
-ls -lah
-echo "GITHUB_WORKSPACE"
-echo "$GITHUB_WORKSPACE"
-echo "GITHUB_WORKSPACE_DIR"
-echo "$GITHUB_WORKSPACE_DIR"
-
-cd $GITHUB_WORKSPACE_DIR
-pwd
-ls -lah
-git init
 git config core.sshCommand "ssh -i $WPENGINE_SSH_KEY_PRIVATE_PATH -o UserKnownHostsFile=$KNOWN_HOSTS_PATH"
 git remote add $WPENGINE_ENV git@$WPENGINE_HOST:$WPENGINE_ENV/$WPENGINE_ENVIRONMENT_NAME.git
 git add .
